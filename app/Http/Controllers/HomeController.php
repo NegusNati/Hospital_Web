@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
+use Prophecy\Doubler\Generator\Node\ReturnTypeNode;
 
 class HomeController extends Controller
 {
@@ -22,4 +23,8 @@ class HomeController extends Controller
             return redirect()->back();
         }
     }
+     public function index()
+     {
+        return view('user.home');
+     }
 }
