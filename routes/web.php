@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,8 @@ use App\Http\Controllers\HomeController;
 
 
 Route::get('/',[HomeController::class,'index']);
+
+Route::get('/add_doctor_view',[AdminController::class,'addview']);
 
 Route::get('/home',[HomeController::class,'redirect']);
 
