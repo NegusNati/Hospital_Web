@@ -36,6 +36,8 @@ Route::get('/add_patient_view',[AdminController::class,'addpatient']);
 
 Route::get('/add_other_view',[AdminController::class,'addother']);
 
+Route::get('/view_employee',[AdminController::class,'viewEmployee']);
+
 Route::get('/home',[HomeController::class,'redirect']);
 
 Route::middleware([

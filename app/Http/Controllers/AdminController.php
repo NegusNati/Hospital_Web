@@ -24,6 +24,12 @@ class AdminController extends Controller
     {
         return view('admin.add_other');
     }
+    public function viewEmployee()
+    {
+        $data = EmployeeTable::all();
+        return view('admin.view_employee', compact('data'));
+    }
+   
    
     public function upload(Request $request)
     {
@@ -75,5 +81,7 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Data Added successfully!');
 
     }
+
+
 
 }
