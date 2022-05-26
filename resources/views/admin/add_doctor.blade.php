@@ -35,8 +35,9 @@
         <!-- partial -->
       <div class="container-fluid page-body-wrapper">
 
+      <div class="container" align = "center" style="padding-top: 90px; padding-left: 20px;  width: 500px;">
       @if(session()->has('message'))
-      <div class="alert alert-success" style="display:inline-block ; height: 30px; width: auto;">
+      <div class="alert alert-success" >
       <button type="button" class="close" data-dismiss="alert">
         x
       </button>
@@ -46,7 +47,6 @@
       </div>
 
       @endif
-      <div class="container" align = "center" style="padding-top: 90px; padding-left: 20px;  width: 500px;">
         <form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data">
         
         @csrf
@@ -113,7 +113,7 @@
 
         <div style="padding: 15px;">
         <label for="" >Doctor Image </label>
-        <input type="file" name="file"  style="width: 270px;" required="">
+        <input type="file" name="file"  style="width: 270px;" >
         </div>
 
         <div style="padding: 15px;">

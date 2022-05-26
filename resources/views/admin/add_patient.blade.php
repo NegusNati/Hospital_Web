@@ -35,8 +35,10 @@
         <!-- partial -->
       <div class="container-fluid page-body-wrapper">
 
+      <div class="container" align = "center" style="padding-top: 90px; padding-left: 20px;  width: 500px;">
+
       @if(session()->has('message'))
-      <div class="alert alert-success" style="display:inline-block ; height: 30px; width: auto;" >
+      <div class="alert alert-success" >
       <button type="button" class="close" data-dismiss="alert">
         x
       </button>
@@ -46,7 +48,8 @@
       </div>
 
       @endif
-      <div class="container" align = "center" style="padding-top: 90px; padding-left: 20px;  width: 500px;">
+
+
         <form action="{{url('upload_patient')}}" method="POST" enctype="multipart/form-data">
         
         @csrf
@@ -58,12 +61,12 @@
 
         <div style="padding: 15px;">
         <label for="">Phone Number</label>
-      <input type="number" name="number" style="color:black; width: 270px;" placeholder="Doctor's Number " required="" >
+      <input type="number" name="number" style="color:black; width: 270px;" placeholder="Patient's Number " required="" >
         </div>
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Age </label>
-        <input type="number" name="age" style="color:black; width: 270px;" placeholder="Doctor's Age" required="">
+        <input type="number" name="age" style="color:black; width: 270px;" placeholder="Patient's Age" required="">
         </div>
 
         <div style="padding: 15px;">
@@ -76,9 +79,9 @@
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Status </label>
-        <select name="availability" id="" style="color:black; width: 270px;" required="">
-          <option value="available" selected> Active </option>
-          <option value="onleave"> Serviced </option>
+        <select name="stat" id="" style="color:black; width: 270px;" required="">
+          <option value="Active" selected> Active </option>
+          <option value="Serviced"> Serviced </option>
         </select>
 
         <div style="padding: 15px;">
@@ -88,7 +91,7 @@
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Money Due </label>
-        <input type="number" name="salary" style="color:black; width: 270px;" placeholder="money due" required="">
+        <input type="number" name="money" style="color:black; width: 270px;" placeholder="money due" required="">
         </div>
 
         <div style="padding: 15px;">

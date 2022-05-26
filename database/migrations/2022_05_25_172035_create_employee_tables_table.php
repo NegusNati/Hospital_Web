@@ -22,7 +22,7 @@ class CreateEmployeeTablesTable extends Migration
             $table->string('sex')->nullable();
             $table->string('availability')->nullable();
             $table->string('role')->nullable();
-            $table->string('emp_id')->nullable();
+            $table->string('emp_id')->uniqid();
             $table->string('salary')->nullable();
             $table->string('date')->nullable();
             $table->string('image')->nullable();

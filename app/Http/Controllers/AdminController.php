@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\EmployeeTable;
+use App\Models\Patient;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -48,6 +49,28 @@ class AdminController extends Controller
         
 
         $emp->save();
+
+        return redirect()->back()->with('message','Data Added successfully!');
+
+    }
+
+    public function uploadPatient(Request $request)
+    {
+        $patient = new Patient;
+   
+
+        $patient->name = $request->name;
+        $patient->number = $request->number;
+        $patient->age = $request->age;
+        $patient->sex = $request->sex;
+        $patient->status = $request->stat;
+        $patient->p_id = $request->id;
+        $patient->money_due = $request->money;
+        $patient->date = $request->date;
+        $patient->time = $request->time;
+        $patient->history = $request->history;
+
+        $patient->save();
 
         return redirect()->back()->with('message','Data Added successfully!');
 

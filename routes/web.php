@@ -26,7 +26,7 @@ Route::POST('/upload_nurse',[AdminController::class,'upload']);
 
 Route::POST('/upload_other',[AdminController::class,'upload']);
 
-// Route::POST('/upload_patient',[AdminController::class,'upload']);
+Route::POST('/upload_patient',[AdminController::class,'uploadPatient']);
 
 Route::get('/add_nurse_view',[AdminController::class,'addnurse']);
 
