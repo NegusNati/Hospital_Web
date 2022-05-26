@@ -47,23 +47,18 @@
 
       @endif
       <div class="container" align = "center" style="padding-top: 90px; padding-left: 20px;  width: 500px;">
-        <form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{url('upload_patient')}}" method="POST" enctype="multipart/form-data">
         
         @csrf
 
         <div style="padding: 15px;">
-        <label for="">Doctor Name</label>
-        <input type="text" style=" width: 270px;" name="name" style="color:black;" placeholder="Doctor's full Name" required="">
+        <label for="">Patient Name</label>
+        <input type="text" style=" width: 270px;" name="name" style="color:black;" placeholder="Patient's full Name" required="">
         </div>
 
         <div style="padding: 15px;">
         <label for="">Phone Number</label>
       <input type="number" name="number" style="color:black; width: 270px;" placeholder="Doctor's Number " required="" >
-        </div>
-
-        <div style="padding: 15px;">
-        <label for="" style=" width: 110px;">Speciality </label>
-        <input type="text" name="speciality" style="color:black; width: 270px;"placeholder="Doctor's Speciality" required="">
         </div>
 
         <div style="padding: 15px;">
@@ -80,40 +75,25 @@
         
 
         <div style="padding: 15px;">
-        <label for="" style=" width: 100px;"> Doctor Availability </label>
+        <label for="" style=" width: 100px;"> Status </label>
         <select name="availability" id="" style="color:black; width: 270px;" required="">
-          <option value="available" selected> Available </option>
-          <option value="onleave"> On Leave </option>
+          <option value="available" selected> Active </option>
+          <option value="onleave"> Serviced </option>
         </select>
 
         <div style="padding: 15px;">
-        <label for="" style=" width: 100px;"> Role </label>
-        <select name="role" id=""style="color:black; width: 270px;" required="" >
-          <option value="doctor" selected>Doctor</option>
-          <option value="nurse">Nurse</option>
-          <option value="other">Other</option>
-          <option value="patient">Patient</option>
-        </select>
+        <label for="" style=" width: 100px;">Patient ID </label>
+        <input type="number" name="id" style="color:black; width: 270px;" placeholder="Patient's ID" required="">
         </div>
 
         <div style="padding: 15px;">
-        <label for="" style=" width: 100px;">Doctor ID </label>
-        <input type="number" name="id" style="color:black; width: 270px;" placeholder="Doctor's ID" required="">
+        <label for="" style=" width: 100px;"> Money Due </label>
+        <input type="number" name="salary" style="color:black; width: 270px;" placeholder="money due" required="">
         </div>
 
         <div style="padding: 15px;">
-        <label for="" style=" width: 100px;">Doctor Salary </label>
-        <input type="number" name="salary" style="color:black; width: 270px;" placeholder="Doctor's Salary" required="">
-        </div>
-
-        <div style="padding: 15px;">
-        <label for="" style=" width: 100px;">Hire Date </label>
-        <input type="date" name="date" style="color:black; width: 270px;" required="">
-        </div>
-
-        <div style="padding: 15px;">
-        <label for="" >Doctor Image </label>
-        <input type="file" name="file"  style="width: 270px;" required="">
+        <label for="">Patient History</label>
+        <input type="text" style=" width: 270px;" name="history" style="color:black;" placeholder="History " required="">
         </div>
 
         <div style="padding: 15px;">
@@ -121,16 +101,9 @@
         </div>
 
 
-
-
-
         </form>
 
-
-
       </div>
-
-
 
       </div>
     <!-- container-scroller -->

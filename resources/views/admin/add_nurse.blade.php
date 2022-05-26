@@ -34,86 +34,64 @@
        @include('admin.navbar');
         <!-- partial -->
       <div class="container-fluid page-body-wrapper">
-
-      @if(session()->has('message'))
-      <div class="alert alert-success">
-      <button type="button" class="close" data-dismiss="alert">
-        x
-      </button>
-  
-        {{session()->get('message')}}
-
-      </div>
-
-      @endif
       <div class="container" align = "center" style="padding-top: 90px; padding-left: 20px;  width: 500px;">
-        <form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data">
-        
-        @csrf
-
+        <form action="{{url('upload_nurse')}}" method="POST" enctype="multipart/form-data">
         <div style="padding: 15px;">
-        <label for="">Doctor Name</label>
-        <input type="text" style=" width: 270px;" name="name" style="color:black;" placeholder="Doctor's full Name" required="">
+        <label for="">Nurse Name</label>
+        <input type="text" style=" width: 270px;" name="name" style="color:black;" placeholder="Nurse's full Name">
         </div>
 
         <div style="padding: 15px;">
         <label for="">Phone Number</label>
-      <input type="number" name="number" style="color:black; width: 270px;" placeholder="Doctor's Number " required="" >
-        </div>
-
-        <div style="padding: 15px;">
-        <label for="" style=" width: 110px;">Speciality </label>
-        <input type="text" name="speciality" style="color:black; width: 270px;"placeholder="Doctor's Speciality" required="">
+        <input type="number" style=" width: 270px;" name="number" style="color:black;" placeholder="Nurse's Number " >
         </div>
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Age </label>
-        <input type="number" name="age" style="color:black; width: 270px;" placeholder="Doctor's Age" required="">
+        <input type="number" name="age" style="color:black; width: 270px;" placeholder="Nurse's Age">
         </div>
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Sex </label>
-        <select name="sex" id="" style="color:black; width: 270px;" required="">
-          <option value="male" selected>Male</option>
+        <select name="sex" id="" style="color:black; width: 270px;">
+          <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
         
 
         <div style="padding: 15px;">
-        <label for="" style=" width: 100px;"> Doctor Availability </label>
-        <select name="availability" id="" style="color:black; width: 270px;" required="">
-          <option value="available" selected> Available </option>
-          <option value="onleave"> On Leave </option>
-        </select>
+        <label for="" style=" width: 100px;">Nurse Availability</label>
+        <input type="text" name="availability" style="color:black; width: 270px;" placeholder="Nurse's Availability">
+        </div>
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Role </label>
-        <select name="role" id=""style="color:black; width: 270px;" required="" >
-          <option value="doctor" selected>Doctor</option>
-          <option value="nurse">Nurse</option>
+        <select name="role" id=""style="color:black; width: 270px;" >
+          <option value="doctor" >Doctor</option>
+          <option value="nurse" selected>Nurse</option>
           <option value="other">Other</option>
           <option value="patient">Patient</option>
         </select>
         </div>
 
         <div style="padding: 15px;">
-        <label for="" style=" width: 100px;">Doctor ID </label>
-        <input type="number" name="id" style="color:black; width: 270px;" placeholder="Doctor's ID" required="">
+        <label for="" style=" width: 100px;">Nurse ID </label>
+        <input type="number" name="id" style="color:black; width: 270px;" placeholder="Nurse's ID">
         </div>
 
         <div style="padding: 15px;">
-        <label for="" style=" width: 100px;">Doctor Salary </label>
-        <input type="number" name="salary" style="color:black; width: 270px;" placeholder="Doctor's Salary" required="">
+        <label for="" style=" width: 100px;">Nurse Salary </label>
+        <input type="number" name="salary" style="color:black; width: 270px;" placeholder="Nurse's Salary">
         </div>
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;">Hire Date </label>
-        <input type="date" name="date" style="color:black; width: 270px;" required="">
+        <input type="date" name="date" style="color:black; width: 270px;">
         </div>
 
         <div style="padding: 15px;">
-        <label for="" >Doctor Image </label>
-        <input type="file" name="file"  style="width: 270px;" required="">
+        <label for="" >Nurse Image </label>
+        <input type="file" name="file"  style="width: 270px;" >
         </div>
 
         <div style="padding: 15px;">

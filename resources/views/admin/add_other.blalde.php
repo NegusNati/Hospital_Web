@@ -47,12 +47,12 @@
 
       @endif
       <div class="container" align = "center" style="padding-top: 90px; padding-left: 20px;  width: 500px;">
-        <form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{url('upload_other')}}" method="POST" enctype="multipart/form-data">
         
         @csrf
 
         <div style="padding: 15px;">
-        <label for="">Doctor Name</label>
+        <label for="">Employee Name</label>
         <input type="text" style=" width: 270px;" name="name" style="color:black;" placeholder="Doctor's full Name" required="">
         </div>
 
@@ -78,9 +78,8 @@
           <option value="female">Female</option>
         </select>
         
-
         <div style="padding: 15px;">
-        <label for="" style=" width: 100px;"> Doctor Availability </label>
+        <label for="" style=" width: 100px;"> Employee Availability </label>
         <select name="availability" id="" style="color:black; width: 270px;" required="">
           <option value="available" selected> Available </option>
           <option value="onleave"> On Leave </option>
@@ -89,21 +88,21 @@
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Role </label>
         <select name="role" id=""style="color:black; width: 270px;" required="" >
-          <option value="doctor" selected>Doctor</option>
+          <option value="doctor" >Doctor</option>
           <option value="nurse">Nurse</option>
-          <option value="other">Other</option>
+          <option value="other" selected>Other</option>
           <option value="patient">Patient</option>
         </select>
         </div>
 
         <div style="padding: 15px;">
-        <label for="" style=" width: 100px;">Doctor ID </label>
-        <input type="number" name="id" style="color:black; width: 270px;" placeholder="Doctor's ID" required="">
+        <label for="" style=" width: 100px;">Employee ID </label>
+        <input type="number" name="id" style="color:black; width: 270px;" placeholder="Employee's ID" required="">
         </div>
 
         <div style="padding: 15px;">
-        <label for="" style=" width: 100px;">Doctor Salary </label>
-        <input type="number" name="salary" style="color:black; width: 270px;" placeholder="Doctor's Salary" required="">
+        <label for="" style=" width: 100px;">Employee Salary </label>
+        <input type="number" name="salary" style="color:black; width: 270px;" placeholder="Employee's Salary" required="">
         </div>
 
         <div style="padding: 15px;">
@@ -112,7 +111,7 @@
         </div>
 
         <div style="padding: 15px;">
-        <label for="" >Doctor Image </label>
+        <label for="" >Employee Image </label>
         <input type="file" name="file"  style="width: 270px;" required="">
         </div>
 
@@ -120,17 +119,9 @@
           <input type="submit" class="btn btn-success">
         </div>
 
-
-
-
-
         </form>
 
-
-
       </div>
-
-
 
       </div>
     <!-- container-scroller -->
