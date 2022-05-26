@@ -5,35 +5,102 @@ namespace App\Http\Controllers;
 use App\Models\EmployeeTable;
 use App\Models\Patient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
     public function addview()
     {
-        return view('admin.add_doctor');
+        if(Auth::id()){
+
+            if(Auth::user()->usertype == 1){
+                return view('admin.add_doctor');
+            }
+            else{
+                return redirect()->back();
+            }
+        }else{
+            return redirect('login');
+        }
+        
     }
     public function addpatient()
     {
-        return view('admin.add_patient');
+        if(Auth::id()){
+
+            if(Auth::user()->usertype == 1){
+                return view('admin.add_patient');
+            }
+            else{
+                return redirect()->back();
+            }
+        }else{
+            return redirect('login');
+        }
+        
     }
     public function addnurse()
     {
-        return view('admin.add_nurse');
+        if(Auth::id()){
+
+            if(Auth::user()->usertype == 1){
+                return view('admin.add_nurse');
+            }
+            else{
+                return redirect()->back();
+            }
+        }else{
+            return redirect('login');
+        }
+        
     }
     public function addother()
     {
-        return view('admin.add_other');
+        if(Auth::id()){
+
+            if(Auth::user()->usertype == 1){
+                return view('admin.add_other');
+            }
+            else{
+                return redirect()->back();
+            }
+        }else{
+            return redirect('login');
+        }
+        
     }
     
     public function viewPatient()
     {
-        $data = Patient::all();
-        return view('admin.view_patient', compact('data'));
+        if(Auth::id()){
+
+            if(Auth::user()->usertype == 1){
+                $data = Patient::all();
+                return view('admin.view_patient', compact('data'));
+            }
+            else{
+                return redirect()->back();
+            }
+        }else{
+            return redirect('login');
+        }
+        
     }
     public function viewEmployee()
     {
-        $data = EmployeeTable::all();
-        return view('admin.view_employee', compact('data'));
+        if(Auth::id()){
+
+            if(Auth::user()->usertype == 1){
+                $data = EmployeeTable::all();
+                return view('admin.view_employee', compact('data'));
+            }
+            else{
+                return redirect()->back();
+            }
+        }else{
+            return redirect('login');
+        }
+       
     }
     public function deleteEmployee($id)
     {
@@ -53,15 +120,35 @@ class AdminController extends Controller
     }
     public function updateEmployee($id)
     {
-        $data = EmployeeTable::find($id);
+        if(Auth::id()){
 
-        return view('admin.update_employee',compact('data'));
+            if(Auth::user()->usertype == 1){
+                $data = EmployeeTable::find($id);
+                return view('admin.update_employee',compact('data'));
+            }
+            else{
+                return redirect()->back();
+            }
+        }else{
+            return redirect('login');
+        }
+        
     } 
     public function updatePatient($id)
     {
-        $data = Patient::find($id);
+        if(Auth::id()){
 
-        return view('admin.update_patient',compact('data'));
+            if(Auth::user()->usertype == 1){
+                $data = Patient::find($id);
+                return view('admin.update_patient',compact('data'));
+            }
+            else{
+                return redirect()->back();
+            }
+        }else{
+            return redirect('login');
+        }
+        
     } 
     public function editEmployee(Request $request, $id)
     {

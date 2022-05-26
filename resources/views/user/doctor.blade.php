@@ -10,7 +10,7 @@
         <div class="item">
           <div class="card-doctor">
             <div class="header">
-              <img height="300 px" src="employeeimage/{{$doc->image}}" alt="">
+              <img style="height: 300px !important" src="employeeimage/{{$doc->image}}" alt="">
               <div class="meta">
                 <a href="#"><span class="mai-call"></span></a>
               </div>
