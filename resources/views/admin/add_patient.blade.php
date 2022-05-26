@@ -36,7 +36,7 @@
       <div class="container-fluid page-body-wrapper">
 
       @if(session()->has('message'))
-      <div class="alert alert-success" >
+      <div class="alert alert-success" style="display:inline-block ; height: 30px; width: auto;" >
       <button type="button" class="close" data-dismiss="alert">
         x
       </button>
@@ -89,6 +89,16 @@
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Money Due </label>
         <input type="number" name="salary" style="color:black; width: 270px;" placeholder="money due" required="">
+        </div>
+
+        <div style="padding: 15px;">
+        <label for="" style=" width: 100px;">Admission Time </label>
+        <input type="time" autocomplete="" name="time" style="color:black; width: 270px;" required="">
+        </div>
+
+        <div style="padding: 15px;">
+        <label for="" style=" width: 100px;">Admission Date </label>
+        <input type="date" name="date" style="color:black; width: 270px;" required="">
         </div>
 
         <div style="padding: 15px;">

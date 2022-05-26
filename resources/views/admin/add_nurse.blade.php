@@ -34,6 +34,18 @@
        @include('admin.navbar');
         <!-- partial -->
       <div class="container-fluid page-body-wrapper">
+        
+      @if(session()->has('message'))
+      <div class="alert alert-success" style="display:inline-block ; height: 30px; width: auto;">
+      <button type="button" class="close" data-dismiss="alert">
+        x
+      </button>
+  
+        {{session()->get('message')}}
+
+      </div>
+
+      @endif
       <div class="container" align = "center" style="padding-top: 90px; padding-left: 20px;  width: 500px;">
         <form action="{{url('upload_nurse')}}" method="POST" enctype="multipart/form-data">
         <div style="padding: 15px;">

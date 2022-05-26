@@ -36,7 +36,7 @@
       <div class="container-fluid page-body-wrapper">
 
       @if(session()->has('message'))
-      <div class="alert alert-success">
+      <div class="alert alert-success" style="display:inline-block ; height: 30px; width: auto;">
       <button type="button" class="close" data-dismiss="alert">
         x
       </button>
