@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EmployeeTable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,7 +15,8 @@ class HomeController extends Controller
     {
         if(Auth::id()){
             if(Auth::user()->user_type =='0'){
-                return view('user.home');
+                $doctor = EmployeeTable::all(); 
+                return view('user.home',compact('doctor'));
             }else{
                 return view('admin.home');
             }
@@ -25,6 +27,12 @@ class HomeController extends Controller
     }
      public function index()
      {
-        return view('user.home');
+         if(Auth::id()){
+             return redirect('home');
+         } else{
+            $doctor = EmployeeTable::all();
+            return view('user.home', compact('doctor'));
+         }
+        
      }
 }
