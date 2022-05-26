@@ -53,7 +53,7 @@
 
         <div style="padding: 15px;">
         <label for="">Employee Name</label>
-        <input type="text" style=" width: 270px;" name="name" style="color:black;" placeholder="Doctor's full Name" required="">
+        <input type="text" name="name" style="color:black; width: 270px;"  placeholder="Doctor's full Name" required="">
         </div>
 
         <div style="padding: 15px;">
@@ -63,7 +63,7 @@
 
         <div style="padding: 15px;">
         <label for="" style=" width: 110px;">Speciality </label>
-        <input type="text" name="speciality" style="color:black; width: 270px;"placeholder="Doctor's Speciality" required="">
+        <input type="text" name="speciality" style="color:black; width: 270px;"placeholder="Emploiee's Speciality" required="">
         </div>
 
         <div style="padding: 15px;">

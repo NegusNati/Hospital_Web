@@ -36,7 +36,7 @@
       <div class="container-fluid page-body-wrapper">
 
       @if(session()->has('message'))
-      <div class="alert alert-success">
+      <div class="alert alert-success" >
       <button type="button" class="close" data-dismiss="alert">
         x
       </button>
@@ -53,7 +53,7 @@
 
         <div style="padding: 15px;">
         <label for="">Patient Name</label>
-        <input type="text" style=" width: 270px;" name="name" style="color:black;" placeholder="Patient's full Name" required="">
+        <input type="text" name="name" style="color:black; width: 270px;"  placeholder="Patient's full Name" required="">
         </div>
 
         <div style="padding: 15px;">
@@ -93,7 +93,7 @@
 
         <div style="padding: 15px;">
         <label for="">Patient History</label>
-        <input type="text" style=" width: 270px;" name="history" style="color:black;" placeholder="History " required="">
+        <input type="text" name="history" style="color:black; width: 270px;"  placeholder="History " required="">
         </div>
 
         <div style="padding: 15px;">

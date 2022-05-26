@@ -18,15 +18,23 @@ use App\Http\Controllers\AdminController;
 
 Route::get('/',[HomeController::class,'index']);
 
-Route::POST('/add_patient_view',[AdminController::class,'addpatient']);
 
-Route::POST('/add_other_view',[AdminController::class,'addother']);
 
 Route::POST('/upload_doctor',[AdminController::class,'upload']);
+
+Route::POST('/upload_nurse',[AdminController::class,'upload']);
+
+Route::POST('/upload_other',[AdminController::class,'upload']);
+
+// Route::POST('/upload_patient',[AdminController::class,'upload']);
 
 Route::get('/add_nurse_view',[AdminController::class,'addnurse']);
 
 Route::get('/add_doctor_view',[AdminController::class,'addview']);
+
+Route::get('/add_patient_view',[AdminController::class,'addpatient']);
+
+Route::get('/add_other_view',[AdminController::class,'addother']);
 
 Route::get('/home',[HomeController::class,'redirect']);
 
