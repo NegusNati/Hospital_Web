@@ -41,15 +41,14 @@
                           <tr>
                             <th>  Name </th>
                             <th> Phone Number </th>
-                            <th> Speciality </th>
                             <th> Age </th>
                             <th> Sex </th>
-                            <th> Availability </th>
-                            <th> Role </th>
-                            <th> Employee ID </th>
-                            <th> Salary </th>
-                            <th> Hier Date </th>
-                            <th> Image </th>
+                            <th> Status </th>
+                            <th> Patient ID </th>
+                            <th> Money Due </th>
+                            <th> History </th>
+                            <th> Admission Date </th>
+                            <th> Admission Time </th>
                             <th aria-placeholder="Delete the Record"> Delete </th>
                             <th aria-placeholder="Upload the Record"> Update </th>
                           </tr>
@@ -59,17 +58,16 @@
                           <tr>
                             <td>{{$instance->name}} </td>
                             <td>{{$instance->number}} </td>
-                            <td>{{$instance->speciality}} </td>
                             <td>{{$instance->age}} </td>
                             <td>{{$instance->sex}} </td>
-                            <td>{{$instance->availability}} </td>
-                            <td>{{$instance->role}} </td>
-                            <td>{{$instance->emp_id}} </td>
-                            <td>{{$instance->salary}} </td>
+                            <td>{{$instance->status}} </td>
+                            <td>{{$instance->p_id}} </td>
+                            <td>{{$instance->money_due}} </td>
+                            <td>{{$instance->history}} </td>
                             <td>{{$instance->date}} </td>
-                            <td><img height="150" width="150" src="employeeimage/{{$instance->image}}" alt="Image" > </td>
-                            <td><a onclick="return confirm('Are you sure you want to delete this record? ')" class="btn btn-danger" href="{{url('delete_record',$instance->id)}}">Delete</a></td>
-                            <td><a class="btn btn-primary" href="{{url('update_record',$instance->id)}}">Update</a></td>
+                            <td>{{$instance->time}} </td>
+                            <td><a onclick="return confirm('Are you sure you want to delete this record? ')" class="btn btn-danger" href="{{url('delete_patient_record',$instance->id)}}">Delete</a></td>
+                            <td><a class="btn btn-primary" href="{{url('update_patient_record',$instance->id)}}">Update</a></td>
                           </tr>
                           @endforeach
                         </tbody>

@@ -97,5 +97,13 @@
               <span class="menu-title">View Employee</span>
             </a>
           </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{url('view_patient')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">View Patients</span>
+            </a>
+          </li>
         </ul>
       </nav>

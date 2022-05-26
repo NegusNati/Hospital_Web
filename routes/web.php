@@ -38,7 +38,22 @@ Route::get('/add_other_view',[AdminController::class,'addother']);
 
 Route::get('/view_employee',[AdminController::class,'viewEmployee']);
 
-Route::get('/home',[HomeController::class,'redirect']);
+Route::get('/view_patient',[AdminController::class,'viewPatient']);
+
+Route::get('/delete_record/{id}',[AdminController::class,'deleteEmployee']);
+
+
+Route::get('/delete_patient_record/{id}',[AdminController::class,'deletePatient']);
+
+Route::get('/update_record/{id}',[AdminController::class,'updateEmployee']);
+
+Route::get('/update_patient_record/{id}',[AdminController::class,'updatePatient']);
+
+Route::POST('/edit_employee/{id}',[AdminController::class,'editEmployee']); 
+
+Route::POST('/edit_patient/{id}',[AdminController::class,'editPatient']); 
+
+Route::get('/home',[HomeController::class,'redirect']); 
 
 Route::middleware([
     'auth:sanctum',
