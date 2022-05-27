@@ -4,7 +4,7 @@
         <div class="col-sm-6 col-lg-3 py-3">
           <h5>Company</h5>
           <ul class="footer-menu">
-            <li><a href="#">About Us</a></li>
+            <li><a href="{{url('/about')}}">About Us</a></li>
             <li><a href="#">Career</a></li>
             <li><a href="#">Editorial Team</a></li>
             <li><a href="#">Protection</a></li>

@@ -47,11 +47,11 @@ Committing to a culture of patient safety and accountability.
 Adopting identified best practices.
 Providing access to high quality, cost-effective health services through an integrated delivery system.
 </p>
-            <a href="about.html" class="btn btn-primary">Learn More</a>
+
           </div>
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
             <div class="img-place custom-img-1">
-              <img src="../assets/img/bg-doctor.png" alt="">
+              <img height="650" width="220" src="employeeimage/doctorsis2.jpg" alt="Image">
             </div>
           </div>
         </div>

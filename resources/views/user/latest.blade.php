@@ -8,7 +8,7 @@
             To inspire hope, and contribute to health and well-being by providing the best care to every patient through integrated clinical practice, education and research <br>
 </p>
         <div class="col-12 text-center mt-4 wow zoomIn">
-          <a href="blog.html" class="btn btn-primary">Read More</a>
+          <a href="{{url('/about')}}" class="btn btn-primary">Read More</a>
         </div>
 
       </div>

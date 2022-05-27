@@ -34,5 +34,21 @@ class HomeController extends Controller
             return view('user.home', compact('doctor'));
          }
         
-     }
+     } 
+     public function viewAbout()
+     {
+
+            return view('user.about_us');
+ 
+     } 
+     public function viewDoc()
+     {
+         if(Auth::id()){
+             return redirect('home');
+         } else{
+            $doctor = EmployeeTable::all();
+            return view('user.doctor_view', compact('doctor'));
+         }
+        
+     } 
 }

@@ -12,7 +12,8 @@
             <div class="header">
               <img style="height: 300px !important" src="employeeimage/{{$doc->image}}" alt="">
               <div class="meta">
-                <a href="#"><span class="mai-call"></span></a>
+              
+                <a href="{{url('/doc_view')}}"> <span class="mai-call"></span></a>
               </div>
             </div>
             <div class="body">

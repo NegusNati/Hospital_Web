@@ -93,21 +93,43 @@
   <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
-        <span class="subhead">We make Hospital Records Easy</span>
-        <h1 class="display-4">Smart Record</h1>
-        <a href="https://www.linkedin.com/in/natnael-birhanu-677a0920b/" class="btn btn-primary">Let's Consult You</a>
+        <div class="page-section pb-0">
+      <div class="container"><h2 class="text-white mb-4" align = "left" > About Us </h2>
+        <div class="row align-items-center">
+          <div class="col-lg-6 py-3 wow fadeInUp">
+            <p class="text-grey mb-4"><h2> --- </h2><br>
+            In addition to offering traditional and established medical care services, We are distinguished with its tertiary and quaternary services. This means We have the personnel and facilities to provide advanced medical inquiry and treatments that are not widely accessible in this region.
+            <h2> --- </h2><br>
+</p>
+          
+          </div>
+          <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
+            <div class="img-place custom-img-1">
+              <img height="800" width="220" src="employeeimage/doccc232.png" alt="Image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+      </div>
+    </div>
+  </div>  
+
+
+  
+  <div class="page-section bg-light" align = "center">
+    <div class="container">
+      <h1 class="text-center wow fadeInUp"> Vision Statement</h1>
+      <div class="col-lg-6 py-3 wow fadeInUp" >
+            <p class="text-grey mb-4" ><br>
+
+A community in which all people achieve their full potential for health and well-being across the lifespan.  We work to be trusted by patients, a valued partner in the community, and creators of positive change. <br>
+</p>
+
       </div>
     </div>
   </div>
 
-  <!-- Welcome girl section -->
-  @include('user.welcom-girl');
-
-  <!-- the doctor section of the page -->
-  @include('user.doctor');   
-
-  <!-- latest section  -->
-  @include('user.latest');
 
 
  <!-- footer section  -->

@@ -67,6 +67,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{{url('/doc_view')}}">Doctors</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
 
             @if(Route::has('login'))
             
@@ -90,24 +93,41 @@
     </nav>
   </header>
 
-  <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
-    <div class="hero-section">
-      <div class="container text-center wow zoomIn">
-        <span class="subhead">We make Hospital Records Easy</span>
-        <h1 class="display-4">Smart Record</h1>
-        <a href="https://www.linkedin.com/in/natnael-birhanu-677a0920b/" class="btn btn-primary">Let's Consult You</a>
+  
+
+
+  <div  align = center style="overflow-x:auto; padding-top:100px;">
+      <table class="table" style=" color: Black; padding-right: 10px ; margin-right: 5px;">
+                        <thead>
+                          <tr>
+                            <th>  Name </th>
+                            <th> Phone Number </th>
+                            <th> Speciality </th>
+                            <th> Sex </th>
+                            <th> Availability </th>
+                            <th> Role </th>
+                            <th> Employee ID </th>
+                            <th> Image </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          @foreach($doctor as $instance)
+                          @if($instance->role == 'doctor')
+                          <tr>
+                            <td>{{$instance->name}} </td>
+                            <td>{{$instance->number}} </td>
+                            <td>{{$instance->speciality}} </td>
+                            <td>{{$instance->sex}} </td>
+                            <td>{{$instance->availability}} </td>
+                            <td>{{$instance->role}} </td>
+                            <td>{{$instance->emp_id}} </td>
+                            <td><img height="150" width="150" src="employeeimage/{{$instance->image}}" alt="Image" > </td>
+                          </tr>
+                          @endif
+                          @endforeach
+                        </tbody>
+                      </table>
       </div>
-    </div>
-  </div>
-
-  <!-- Welcome girl section -->
-  @include('user.welcom-girl');
-
-  <!-- the doctor section of the page -->
-  @include('user.doctor');   
-
-  <!-- latest section  -->
-  @include('user.latest');
 
 
  <!-- footer section  -->

@@ -40,6 +40,10 @@ Route::get('/view_employee',[AdminController::class,'viewEmployee']);
 
 Route::get('/view_patient',[AdminController::class,'viewPatient']);
 
+Route::get('/about',[HomeController::class,'viewAbout']); 
+
+Route::get('/doc_view',[HomeController::class,'viewDoc']); 
+
 Route::get('/delete_record/{id}',[AdminController::class,'deleteEmployee']);
 
 
