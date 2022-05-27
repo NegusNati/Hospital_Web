@@ -16,7 +16,7 @@
               <div class="circle-shape bg-primary text-white">
                 <span class="mai-shield-checkmark"></span>
               </div>
-              <p><span>One</span>-Health Protection</p>
+              <p><span>Hospital</span> Protection</p>
             </div>
           </div>
           <div class="col-md-4 py-3 py-md-0">
@@ -24,7 +24,7 @@
               <div class="circle-shape bg-accent text-white">
                 <span class="mai-basket"></span>
               </div>
-              <p><span>One</span>-Health Pharmacy</p>
+              <p><span>Hospital</span> Pharmacy</p>
             </div>
           </div>
         </div>
@@ -36,7 +36,17 @@
         <div class="row align-items-center">
           <div class="col-lg-6 py-3 wow fadeInUp">
             <h1>Welcome to Your Health <br> Center</h1>
-            <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!</p>
+            <p class="text-grey mb-4"><h2>Mission</h2><br>
+As the local Health Care District, our mission is to meet the health care needs of the District residents through medical services, education and research.
+
+We are committed to assuming the leadership role in improving and maintaining the health status of the residents by:
+
+Identifying and assessing community health care needs.
+Developing mechanisms to respond to the identified need within the financial capabilities of the District.
+Committing to a culture of patient safety and accountability.
+Adopting identified best practices.
+Providing access to high quality, cost-effective health services through an integrated delivery system.
+</p>
             <a href="about.html" class="btn btn-primary">Learn More</a>
           </div>
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">

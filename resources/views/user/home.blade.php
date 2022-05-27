@@ -8,7 +8,7 @@
 
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-  <title>One Health - Medical Center HTML5 Template</title>
+  <title>Hospital Record Management Systsem - Natnael </title>
 
   <link rel="stylesheet" href="../assets/css/maicons.css">
 
@@ -31,17 +31,16 @@
         <div class="row">
           <div class="col-sm-8 text-sm">
             <div class="site-info">
-              <a href="#"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
+              <a href="#"><span class="mai-call text-primary"></span> +251-939-080-890 </a>
               <span class="divider">|</span>
-              <a href="#"><span class="mai-mail text-primary"></span> mail@example.com</a>
+              <a href="#"><span class="mai-mail text-primary"></span> natnaelbirhanu22@gmail.com</a>
             </div>
           </div>
           <div class="col-sm-4 text-right text-sm">
             <div class="social-mini-button">
-              <a href="#"><span class="mai-logo-facebook-f"></span></a>
-              <a href="#"><span class="mai-logo-twitter"></span></a>
-              <a href="#"><span class="mai-logo-dribbble"></span></a>
-              <a href="#"><span class="mai-logo-instagram"></span></a>
+              <a href="https://www.facebook.com/negus.nati/"><span class="mai-logo-facebook-f"></span></a>
+              <a href="https://twitter.com/negusnati"><span class="mai-logo-twitter"></span></a>
+              <a href="https://www.instagram.com/negusnati"><span class="mai-logo-instagram"></span></a>
             </div>
           </div>
         </div> <!-- .row -->
@@ -50,16 +49,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="{{url('/')}}"><span class="text-primary">One</span>-Health</a>
+        <a class="navbar-brand" href="{{url('/')}}"><span class="text-primary">Hospital</span>-Record</a>
 
-        <form action="#">
-          <div class="input-group input-navbar">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
-            </div>
-            <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
-          </div>
-        </form>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -75,9 +66,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="doctors.html">Doctors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">News</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -108,9 +96,9 @@
   <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
-        <span class="subhead">Let's make your life happier</span>
-        <h1 class="display-4">Healthy Living</h1>
-        <a href="#" class="btn btn-primary">Let's Consult</a>
+        <span class="subhead">We make Hospital Records Easy</span>
+        <h1 class="display-4">Smart Record</h1>
+        <a href="https://www.linkedin.com/in/natnael-birhanu-677a0920b/" class="btn btn-primary">Let's Consult You</a>
       </div>
     </div>
   </div>
@@ -128,11 +116,11 @@
   @include('user.apointment');
 
  <!-- footer section  -->
-  @include('user.footer');
+  @include('user.footer')
 
       <hr>
 
-      <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p>
+      <p id="copyright">Copyright &copy; 2022 <a href="https://github.com/NegusNati" target="_blank">Negus </a>. All right reserved</p>
     </div>
   </footer>
 
