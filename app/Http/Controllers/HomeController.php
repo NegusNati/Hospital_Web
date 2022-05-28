@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
 use Prophecy\Doubler\Generator\Node\ReturnTypeNode;
+use App\Notification\SendEmailVerificationNotification;
 
 class HomeController extends Controller
 {
@@ -21,17 +22,19 @@ class HomeController extends Controller
                 return view('admin.home');
             }
 
-        }else {
+        
+        }    else {
             return redirect()->back();
         }
     }
-     public function index()
-     {
+     public function index(){
+    //  {
          if(Auth::id()){
-             return redirect('home');
-         } else{
             $doctor = EmployeeTable::all();
             return view('user.home', compact('doctor'));
+
+         } else{
+            return redirect('home');
          }
         
      } 
@@ -44,10 +47,11 @@ class HomeController extends Controller
      public function viewDoc()
      {
          if(Auth::id()){
-             return redirect('home');
-         } else{
             $doctor = EmployeeTable::all();
             return view('user.doctor_view', compact('doctor'));
+       
+         } else{
+            return redirect('home');
          }
         
      } 

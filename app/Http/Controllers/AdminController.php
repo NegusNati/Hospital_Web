@@ -13,7 +13,7 @@ class AdminController extends Controller
     {
         if(Auth::id()){
 
-            if(Auth::user()->usertype == 1){
+            if(Auth::user()->user_type== 1){
                 return view('admin.add_doctor');
             }
             else{
@@ -28,7 +28,7 @@ class AdminController extends Controller
     {
         if(Auth::id()){
 
-            if(Auth::user()->usertype == 1){
+            if(Auth::user()->user_type == 1){
                 return view('admin.add_patient');
             }
             else{
@@ -43,7 +43,7 @@ class AdminController extends Controller
     {
         if(Auth::id()){
 
-            if(Auth::user()->usertype == 1){
+            if(Auth::user()->user_type == 1){
                 return view('admin.add_nurse');
             }
             else{
@@ -58,7 +58,7 @@ class AdminController extends Controller
     {
         if(Auth::id()){
 
-            if(Auth::user()->usertype == 1){
+            if(Auth::user()->user_type == 1){
                 return view('admin.add_other');
             }
             else{
@@ -74,7 +74,7 @@ class AdminController extends Controller
     {
         if(Auth::id()){
 
-            if(Auth::user()->usertype == 1){
+            if(Auth::user()->user_type == 1){
                 $data = Patient::all();
                 return view('admin.view_patient', compact('data'));
             }
@@ -90,7 +90,7 @@ class AdminController extends Controller
     {
         if(Auth::id()){
 
-            if(Auth::user()->usertype == 1){
+            if(Auth::user()->user_type == 1){
                 $data = EmployeeTable::all();
                 return view('admin.view_employee', compact('data'));
             }
@@ -122,7 +122,7 @@ class AdminController extends Controller
     {
         if(Auth::id()){
 
-            if(Auth::user()->usertype == 1){
+            if(Auth::user()->user_type == 1){
                 $data = EmployeeTable::find($id);
                 return view('admin.update_employee',compact('data'));
             }
@@ -138,7 +138,7 @@ class AdminController extends Controller
     {
         if(Auth::id()){
 
-            if(Auth::user()->usertype == 1){
+            if(Auth::user()->user_type == 1){
                 $data = Patient::find($id);
                 return view('admin.update_patient',compact('data'));
             }
