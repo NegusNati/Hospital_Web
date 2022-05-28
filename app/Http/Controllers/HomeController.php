@@ -19,7 +19,8 @@ class HomeController extends Controller
                 $doctor = EmployeeTable::all(); 
                 return view('user.home',compact('doctor'));
             }else{
-                return view('admin.home');
+                $doctor = EmployeeTable::all();
+                return view('admin.home',compact('doctor'));
             }
 
         
