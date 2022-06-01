@@ -155,6 +155,6 @@ function valiid(){
 }
 </script>
     <!-- container-scroller -->
-    @include('admin.js');
+    @include('admin.js')
   </body>
 </html>

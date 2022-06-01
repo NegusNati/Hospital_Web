@@ -8,8 +8,11 @@
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
               <span class="mdi mdi-menu"></span>
 </button>
-            <ul class="navbar-nav navbar-nav-right">
 
+            <ul class="navbar-nav navbar-nav-right">
+            <div align="center" class="container" style=" background-color:#bae8e8; height: 20px;">
+    <h1 align="center" style="  color: black;font-weight: 400; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; align-items: stretch;">ADMIN - DASHBOARD</h1>
+    </div>
               <x-app-layout>
               </x-app-layout>
 

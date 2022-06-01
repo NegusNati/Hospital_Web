@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -158,12 +157,11 @@ function valiid(){
     }else{
          return true;
     }
-
 //"^[0-9]*$", cno))||(cno.length()!=10)
 //"^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$"
 }
 </script>
     <!-- container-scroller -->
-    @include('admin.js');
+    @include('admin.js')
   </body>
 </html>
