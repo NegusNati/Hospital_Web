@@ -8,20 +8,7 @@
     <div class="container-scroller">
       <div class="row p-0 m-0 proBanner" id="proBanner">
         <div class="col-md-12 p-0 m-0">
-          <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
-            <div class="ps-lg-1">
-              <div class="d-flex align-items-center justify-content-between">
-                <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with this template!</p>
-                <a href="https://www.bootstrapdash.com/product/corona-free/?utm_source=organic&utm_medium=banner&utm_campaign=buynow_demo" target="_blank" class="btn me-2 buy-now-btn border-0">Get Pro</a>
-              </div>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-              <a href="https://www.bootstrapdash.com/product/corona-free/"><i class="mdi mdi-home me-3 text-white"></i></a>
-              <button id="bannerClose" class="btn border-0 p-0">
-                <i class="mdi mdi-close text-white me-0"></i>
-              </button>
-            </div>
-          </div>
+         
         </div>
       </div>
       <!-- partial:partials/_sidebar.html -->
@@ -50,28 +37,28 @@
       @endif
 
 
-        <form action="{{url('upload_patient')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{url('upload_patient')}}" method="POST" enctype="multipart/form-data" onsubmit="return valiid(); ">
         
         @csrf
 
         <div style="padding: 15px;">
         <label for="">Patient Name</label>
-        <input type="text" name="name" style="color:black; width: 270px;"  placeholder="Patient's full Name" required="">
+        <input type="text" name="name" id="name" style="color:black; width: 270px;"  placeholder="Patient's full Name" required="">
         </div>
 
         <div style="padding: 15px;">
         <label for="">Phone Number</label>
-      <input type="number" name="number" style="color:black; width: 270px;" placeholder="Patient's Number " required="" >
+      <input type="number" name="number" id="number" style="color:black; width: 270px;" placeholder="Patient's Number " required="" >
         </div>
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Age </label>
-        <input type="number" name="age" style="color:black; width: 270px;" placeholder="Patient's Age" required="">
+        <input type="number" name="age" id="age" style="color:black; width: 270px;" placeholder="Patient's Age" required="">
         </div>
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Sex </label>
-        <select name="sex" id="" style="color:black; width: 270px;" required="">
+        <select name="sex" id="sex" style="color:black; width: 270px;" required="">
           <option value="male" selected>Male</option>
           <option value="female">Female</option>
         </select>
@@ -79,19 +66,19 @@
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Status </label>
-        <select name="stat" id="" style="color:black; width: 270px;" required="">
+        <select name="stat" id="stat" style="color:black; width: 270px;" required="">
           <option value="Active" selected> Active </option>
           <option value="Serviced"> Serviced </option>
         </select>
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;">Patient ID </label>
-        <input type="number" name="id" style="color:black; width: 270px;" placeholder="Patient's ID" required="">
+        <input type="number" name="id" id="id" style="color:black; width: 270px;" placeholder="Patient's ID" required="">
         </div>
 
         <div style="padding: 15px;">
         <label for="" style=" width: 100px;"> Money Due </label>
-        <input type="number" name="money" style="color:black; width: 270px;" placeholder="money due" required="">
+        <input type="number" name="money" id="money" style="color:black; width: 270px;" placeholder="money due" required="">
         </div>
 
         <div style="padding: 15px;">
@@ -119,6 +106,52 @@
       </div>
 
       </div>
+      <script>
+function valiid(){
+
+    let Name = document.getElementById("name");
+    let phoneNumber =document.getElementById("number");
+    // let speciality = document.getElementById("speciality");
+    let age = document.getElementById("age");
+    let sex = document.getElementById("sex").value;
+    let Availability = document.getElementById("stat").value;
+    // let role = document.getElementById("role").value;
+    // let salary = document.getElementById("money");
+
+    
+ if(!(/^[A-Za-z\s]+$/.test(Name.value))) {
+    alert("You need to write Name with only characters from A-Z");
+        // return;
+        return false;
+    }else if(!(/^[A-Za-z\s]+$/.test(speciality.value))){ 
+      alert("You need to write Speciality with only characters from A-Z");
+        return false;
+       } else if( age.value < 1 || age.value > 120 ){
+        alert("You need to write Age with only age between 1 - 120 ");
+        return false;
+        // return;
+    } else if((Availability.length <= 0)){
+      alert("You need to select the Status of the patient ");
+        return false;
+        // return;
+    }else if((sex.length <= 0)){
+      alert("You need to select the Sex ");
+        return false;
+        // return;
+    }else if (phoneNumber.value.length != 10) {
+      alert("Phone number is not 10 digits long[0911--] or you inserted a character ");
+        return false;
+        // return;
+        
+    }else{
+         return true;
+    }
+
+
+//"^[0-9]*$", cno))||(cno.length()!=10)
+//"^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$"
+}
+</script>
     <!-- container-scroller -->
     @include('admin.js');
   </body>
