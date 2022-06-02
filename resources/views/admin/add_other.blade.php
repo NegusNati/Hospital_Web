@@ -120,6 +120,9 @@ function valiid(){
     let Availability = document.getElementById("availability").value;
     let role = document.getElementById("role").value;
     let salary = document.getElementById("salary");
+    let date = document.getElementById("date").value;
+    let userdate = new Date(date); 
+    let today = new Date();
 
     
  if(!(/^[A-Za-z\s]+$/.test(Name.value))) {
@@ -141,7 +144,11 @@ function valiid(){
       alert("You need to select the Sex ");
         return false;
         // return;
-    }else if((role.length <= 0)){
+    }else if( userdate > today ){
+        alert("You have inserted an incorrect Date ");
+        return false;
+        // return;
+    } else if((role.length <= 0)){
       alert("You need to select the Role ");
         return false;
         // return;

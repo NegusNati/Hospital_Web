@@ -115,6 +115,9 @@ function valiid(){
     let Availability = document.getElementById("stat").value;
     // let role = document.getElementById("role").value;
     // let salary = document.getElementById("money");
+    let date = document.getElementById("date").value;
+    let userdate = new Date(date); 
+    let today = new Date();
 
     
  if(!(/^[A-Za-z\s]+$/.test(Name.value))) {
@@ -128,7 +131,11 @@ function valiid(){
         alert("You need to write Age with only age between 1 - 120 ");
         return false;
         // return;
-    } else if((Availability.length <= 0)){
+    }else if( userdate > today ){
+        alert("You have inserted an incorrect Date ");
+        return false;
+        // return;
+    }  else if((Availability.length <= 0)){
       alert("You need to select the Status of the patient ");
         return false;
         // return;
